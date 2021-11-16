@@ -16,6 +16,7 @@ pipeline {
                     -Dsonar.java.binaries=target/classes"
                    }
               }
+           }
          stage('Deploy'){
              steps {
                 sh 'sudo systemctl start docker'
