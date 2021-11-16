@@ -7,7 +7,7 @@ pipeline {
                    script{
                       scannerHome=tool 'sonarqube'
                    }
-                   withSonarQubeEnv('SonarQube Scanner'){
+                   withSonarQubeEnv('sonarqube'){
                      sh "mvn clean install -DskipTests sonar:sonar \
                     -Dsonar.projectKey=sonar-maven \
                     -Dsonar.host.url=http://192.168.50.104:9000 \
